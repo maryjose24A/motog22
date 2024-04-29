@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionario de Motocicletas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .motocicleta {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            display: flex; /* Establece el contenedor como flexbox */
+            align-items: center; /* Centra verticalmente los elementos */
+        }
+        .motocicleta img {
+            max-width: 200px; /* Ancho máximo para la imagen */
+            margin-left: 20px; /* Espacio entre la imagen y el texto */
+        }
+        .motocicleta:last-child {
+            border: none;
+        }
+        .buscador {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .buscador input[type="text"] {
+            padding: 8px;
+            width: 50%;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        .buscador input[type="submit"] {
+            padding: 8px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .checkout {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .checkout select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .checkout button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header style="background: linear-gradient(to right, #ff3300, #ffcc99); text-align: center; padding: 20px;">
+ <marquee direction="left" behavior="alternate" scrollamount="12">
+    <h2 style="color: #fff; font-size: 24px; font-style: italic;">Adrenalina sobre ruedas</h2></marquee>
+        <h1 style="color: #fff;">Concesionario de Motocicletas</h1>
+    
+</header>
+
+<nav>
+    <a href="#" onclick="mostrarSeccion('cilindrada-125')">125cc</a>
+    <a href="#" onclick="mostrarSeccion('cilindrada-250')">250cc</a>
+    <a href="#" onclick="mostrarSeccion('cilindrada-300')">300cc</a>
+    <a href="#" onclick="mostrarSeccion('cilindrada-400')">400cc</a>
+    <a href="#" onclick="mostrarSeccion('cilindrada-750')">750cc</a>
+    <a href="#" onclick="mostrarSeccion('cilindrada-900')">900cc</a>
+    <a href="#" onclick="mostrarSeccion('cuatrimotos')">Cuatrimotos</a>
+    <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+</nav>
+
+<div class="buscador">
+    <form onsubmit="buscarMotocicleta(); return false;">
+        <input type="text" id="busqueda" placeholder="Buscar motocicleta...">
+        <input type="submit" value="Buscar">
+    </form>
+</div>
+
+<div class="section" id="bienvenida">
+    <h2>Bienvenido a nuestro Concesionario de Motocicletas</h2>
+    <p>En nuestro concesionario encontrarás una amplia selección de motocicletas de diferentes marcas y cilindradas. Explora nuestra oferta a continuación:</p>
+</div>
+
+<!-- Sección de motocicletas de 125cc -->
+<div class="section" id="cilindrada-125">
+    <h2>Motocicletas de 125cc</h2>
+    <div class="motocicleta">
+    
+        <div>
+ <input type="checkbox" id="motocicleta1" name="motocicleta1">
+
+            <h3>Marca Italika Cc:125</h3>
+            <p>Marca: Italika</p>
+            <p>Modelo: FT 125-1</p>
+            <p>Precio: $20,000</p>
+        </div>
+        <img src="https://elektra.vtexassets.com/arquivos/ids/4555293-800-auto?v=638482113310670000&width=800&height=auto&aspect=true" alt="Motocicleta de 125cc">
+    </div>
+        <div class="motocicleta">
+            <div>
+  <input type="checkbox" id="motocicleta1" name="motocicleta1">
+
+                <h3>Marca: Italika Cc:125</h3>
+                <p>Marca: Italika</p>
+                <p>Modelo: D125</p>
+                <p>Precio: $18,000</p>
+            </div>
+            <img src="https://th.bing.com/th?id=OPHS.MqfzVFkQ4U1%2f9w474C474&w=248&h=248&c=17&o=5&pid=21.1">
+        </div>
+        <div class="motocicleta">
+            <div>
+  <input type="checkbox" id="motocicleta1" name="motocicleta1">
+
+                <h3>Marca: Italika Cc:125-3</h3>
+                <p>Marca: Italika</p>
+                <p>Modelo: AT125 RT</p>
+                <p>Precio: $22,999</p>
+            </div>
+            <img src="https://elektra.vtexassets.com/arquivos/ids/4558114-800-auto?v=638482127811800000&width=800&height=auto&aspect=true" alt="Motocicleta de 125cc">
+        </div>
+    </div>
+    
+    <div class="motocicleta">...</div> 
+</div>
+
+<!-- Sección de motocicletas de 250cc -->
+<div class="section" id="cilindrada-250">
+    <h2>Motocicletas de 250cc</h2>
+    <div class="motocicleta">
+    
+        <div>
+ <input type="checkbox" id="motocicleta1" name="motocicleta1">
+
+            <h3>Marca: Tekken Cc:250</h3>
+            <p>Marca: Mb Tekken R</p>
+            <p>Modelo: Line 250cc 2024</p>
+            <p>Precio: $56,999</p>
+        </div>
+        <img src="https://ss207.liverpool.com.mx/xl/1141823520.jpg" alt="Motocicleta de 125cc">
+    </div>
+<h2>Motocicletas de 250cc</h2>
+        <div class="motocicleta">
+            <div>
+  <input type="checkbox" id="motocicleta1" name="motocicleta1">
+
+                <h3>Marca: Pulsar Cc:250</h3>
+                <p>Marca: Pulsar</p>
+                <p>Modelo: N250 2024</p>
+                <p>Precio: $71,000</p>
+            </div>
+            <img src="https://bajajmatriz.com/wp-content/uploads/2023/01/Captura-de-Pantalla-2023-01-18-a-las-10.15.50.png" alt="Motocicleta de 125cc">
+        </div>
+<h2>Motocicletas de 250cc</h2>
+        <div class="motocicleta">
+            <div>
+  <input type="checkbox" id="motocicleta1" name="motocicleta1">
+
+                <h3>Marca: Vento Cc:250</h3>
+                <p>Marca: Vento</p>
+                <p>Modelo: Tornado 250</p>
+                <p>Precio: $30,999</p>
+            </div>
+<a href="https://www.vento.com/">
+
+            <img src="https://chedrauimx.vtexassets.com/arquivos/ids/23706502-1600-auto?v=638382636954330000&width=1600&height=auto&aspect=true" alt="Motocicleta de 125cc"></a>
+        </div>
+
+    
+    <div class="motocicleta">...</div> 
+</div>
+
+ <Sección de motocicletas de 300cc >
+<div class="section" id="cilindrada-300">
+    <h2>Motocicletas de 300cc</h2>
+    <div class="motocicleta">
+        
+        <div>
+<input type="checkbox" id="motocicleta3" name="motocicleta3">
+            <h3>Marca: Carabela Cc:300</h3>
+            <p>Marca: Crabela</p>
+            <p>Modelo: R300Z</p>
+            <p>Precio: $68,999</p>
+        </div>
+        <img src="https://ss207.liverpool.com.mx/xl/1138932652.jpg" alt="Motocicleta de 125cc">
+    </div>
+<div class="motocicleta">
+     
+        <div>
+   <input type="checkbox" id="motocicleta3" name="motocicleta3">
+            <h3>Marca: Alpina Cc:300</h3>
+            <p>Marca: Alpina</p>
+            <p>Modelo: Adventure</p>
+            <p>Precio: $52,999</p>
+        </div>
+        <img src="https://i5.walmartimages.com.mx/mg/gm/3pp/asr/57cab3d5-7658-4ae2-83e9-e809055cb886.9db4ff3f93e27c50cf05bb0c76a1a751.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Motocicleta de 125cc">
+    </div>
+<div class="motocicleta">
+     
+        <div>
+   <input type="checkbox" id="motocicleta3" name="motocicleta3">
+            <h3>Marca: Vento Cc:300</h3>
+            <p>Marca: Vento</p>
+            <p>Modelo: Nitrox T3 300</p>
+            <p>Precio: $52,999</p>
+        </div>
+        <img src="https://resources.sears.com.mx/medios-plazavip/fotos/productos_sears1/original/4147480.jpg?scale=500&qlty=75" alt="Motocicleta de 125cc">
+    </div>
+
+    
+     <div class="motocicleta">...</div> 
+</div>
+<!-- Sección de motocicletas de 400cc -->
+<div class="section" id="cilindrada-400">
+    <h2>Motocicletas de 400cc</h2>
+    <div class="motocicleta">
+        
+        <div>
+<input type="checkbox" id="motocicleta4" name="motocicleta4">
+            <h3>Marca: Dinamo  Cc:400</h3>
+            <p>Marca: Dinamo</p>
+            <p>Modelo: Super Sport 400</p>
+            <p>Precio: $72,099</p>
+        </div>
+        <img src="https://i5.walmartimages.com.mx/mg/gm/3pp/asr/0a12b024-993e-4d26-ba9d-13cf06f2c015.b05bbb63e726b19806fa861e31075d8d.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Motocicleta de 400cc">
+    </div>
+    <div class="motocicleta">
+               <div>
+ <input type="checkbox" id="motocicleta5" name="motocicleta5">
+
+            <h3>Marca bajaj Cc:400</h3>
+            <p>Marca: bajaj</p>
+            <p>Modelo: dominar te 400</p>
+            <p>Precio: $98,999</p>
+        </div>
+        <img src="https://www.soriana.com/dw/image/v2/BGBD_PRD/on/demandware.static/-/Sites-soriana-grocery-master-catalog/default/dw33cfa90f/images/product/7503038946638_A.jpg?sw=445&sh=445&sm=fit" alt="Motocicleta de 400cc">
+    </div>
+</div>
+
+<div class="section" id="cilindrada-750">
+    <h2>Motocicletas de 750cc</h2>
+    <div class="motocicleta">
+                <div>
+<input type="checkbox" id="motocicleta7" name="motocicleta7">
+
+            <h3>Marca: BMW Cc:750</h3>
+            <p>Marca: BMW</p>
+            <p>Modelo: F 750 Gs</p>
+            <p>Precio: $309,900</p>
+        </div>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_927080-MLM75077753957_032024-O.webp" alt="Motocicleta de 750cc">
+    </div>
+    <div class="motocicleta">
+                <div>
+<input type="checkbox" id="motocicleta8" name="motocicleta8">
+
+            <h3>Marca Honda  Cc:750</h3>
+            <p>Marca: Honda</p>
+            <p>Modelo: Vt 750 aero</p>
+            <p>Precio: $75,000</p>
+        </div>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_847757-MLM71697147332_092023-O.webp" alt="Motocicleta de 750cc">
+    </div>
+</div>
+
+<div class="section" id="cilindrada-900">
+    <h2>Motocicletas de 900cc</h2>
+    <div class="motocicleta">
+               <div>
+ <input type="checkbox" id="motocicleta9" name="motocicleta9">
+
+            <h3>Marca: KAWASAKI Cc:900</h3>
+            <p>Marca: kawasaki</p>
+            <p>Modelo: Vulcan Custom 900</p>
+            <p>Precio: $103,000</p>
+        </div>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_715069-MLM75508685650_042024-O.webp" alt="Motocicleta de 900cc">
+    </div>
+</div>
+
+
+
+<div class="section" id="cuatrimotos">
+    <h2>Cuatrimotos</h2>
+
+    <div class="motocicleta">
+        <div>
+ <input type="checkbox" id="cuatrimoto1" name="cuatrimoto1">
+            <h3>Marca: ITALIKA Modelo ATV</h3>
+            <p>Marca: Italika</p>
+            <p>Modelo: ATV180 2024</p>
+            <p>Precio: $43,000</p>
+        </div>
+        <img src="https://elektra.vtexassets.com/arquivos/ids/4590724-800-auto?v=638489900550800000&width=800&height=auto&aspect=true" alt="Cuatrimoto">
+    </div>
+    <div class="motocicleta">
+                <div>
+<input type="checkbox" id="cuatrimoto2" name="cuatrimoto2">
+
+            <h3>Marca1: CARABELA Modelo:Hills</h3>
+            <p>Marca: CarabelaY</p>
+            <p>Modelo: Hills 2024</p>
+            <p>Precio: $50,399</p>
+        </div>
+        <img src="https://ss207.liverpool.com.mx/xl/1143508125.jpg" alt="Cuatrimoto">
+    </div>
+    <div class="motocicleta">
+        <div>
+<input type="checkbox" id="cuatrimoto2" name="cuatrimoto2">
+
+            <h3>Marca: VELOCI Modelo:Beast Hyper Sport</h3>
+            <p>Marca: Veloci</p>
+            <p>Modelo: Beast Hyper Sport 200 2024</p>
+            <p>Precio: $42,999</p>
+        </div>
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRXDsLCTc32K-YXkLJfn9pyCBNAeJjeF11mukSpyUIOUI3ngsd1d35vpxZ-JVMVdoZwgVaXEjU2oSDsflp4k-1EgvDHo7eGJakstM6BV75APA3ML1gMYGOU&usqp=CAE" alt="Cuatrimoto">
+    </div>
+
+
+    
+</div>
+
+
+
+<div class="section" id="contacto">
+    <h2>Contacto</h2>
+     <p>Ponte en contacto con nosotros para más información sobre nuestras motocicletas:</p>
+    <p>Teléfono: 923-105-8417</p>
+    <p>Email: Adredalina_sobreru3das.com</p>
+<h2>Queja o Comentario</h2>
+ <form id="formulario-contacto" onsubmit="enviarComentario(event)">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" required></textarea><br><br>
+        <input type="submit" value="Enviar">
+        
+    </form>
+</div>
+
+<div class="checkout">
+    <select id="motocicletas" multiple>
+        <option value="motocicleta1">Italika FT 125</option>
+<option value="motocicleta1">Italika D125</option>
+<option value="motocicleta1">Italika AT125 RT</option>
+<option value="motocicleta2">Tekken Line 250cc</option>
+<option value="motocicleta3">Vento Pulsar </option>
+<option value="motocicleta3">Vento TornadoS </option>
+<option value="motocicleta3">CARABELA R300Z</option>
+<option value="motocicleta3">ALPINA Adventure </option>
+<option value="motocicleta3">Vento Nitrox T3 300</option>
+<option value="motocicleta3">DINAMO Super Sport 400cc</option>
+<option value="motocicleta3">Bajaj Dominar Te 400</option>
+<option value="motocicleta3">BMW F 750 Gs</option>
+<option value="motocicleta3">Honda Vt 750 Aero</option>
+<option value="motocicleta3">KAWASAKI Vulcan Custom 900</option>
+<option value="motocicleta3">ATV180 2024</option>
+<option value="motocicleta3">Hills 2024</option>
+<option value="motocicleta3">Beast Hyper Sport</option>
+    </select>
+  </div>
+ <style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .mensaje {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Compra de Motocicletas</h1>
+        <center><button onclick="mostrarFormulario()">Ir al Pago</button></center>
+
+        <div id="direccionForm" style="display: none;">
+            <h2>Datos de Dirección</h2>
+            <form action="123" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+                
+                <input type="submit" value="Continuar al Pago">
+            </form>
+        </div>
+
+        <div id="pagoForm" style="display: none;">
+            <h2>Datos de Pago</h2>
+            <form action="procesar_pago.php" method="POST">
+                <!-- Aquí va el formulario de pago -->
+                <label for="tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" required>
+                
+                <label for="vencimiento">Fecha de Vencimiento:</label>
+                <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" required>
+                
+                <input type="submit" value="Pagar">
+            </form>
+        </div>
+
+        <div id="mensajeGracias" class="mensaje" style="display: none;">
+            ¡Gracias por tu pago! Espera tu producto en la comodidad de tu casa.
+        </div>
+    </div>
+
+    <script>
+        function mostrarFormulario() {
+            document.getElementById('direccionForm').style.display = 'block';
+            document.getElementById('pagoForm').style.display = 'block';
+            document.getElementById('mensajeGracias').style.display = 'block';
+        }
+    </script>
+<script>
+    function mostrarSeccion(id) {
+
+        // Oculta todas las secciones
+        var secciones = document.getElementsByClassName('section');
+        for (var i = 0; i < secciones.length; i++) {
+            secciones[i].style.display = 'none';
+        }
+        // Muestra la sección correspondiente al cilindraje seleccionado
+        var seccion = document.getElementById(id);
+        if (seccion) {
+            seccion.style.display = 'block';
+        }
+    }
+   
+    mostrarSeccion('bienvenida');
+
+    function buscarMotocicleta() {
+        var textoBusqueda = document.getElementById('busqueda').value.toLowerCase();
+        var motocicletas = document.querySelectorAll('.motocicleta');
+        motocicletas.forEach(function(motocicleta) {
+            var textoMotocicleta = motocicleta.textContent.toLowerCase();
+            if (textoMotocicleta.includes(textoBusqueda)) {
+                motocicleta.style.display = 'flex';
+            } else {
+                motocicleta.style.display = 'none';
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>
